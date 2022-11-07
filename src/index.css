@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face { 
+	font-family: "EF_WAKEUP"; 
+	src: url("./font/EF_WAKEUP.ttf"); 
+}
+:root{
+	--font-EF_WAKEUP : "EF_WAKEUP"
+}
