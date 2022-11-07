@@ -16,9 +16,9 @@ color:#3D8361;
 padding:2%;
 `
 const NavPage = ({page,incrNum, decrNum}) => {
-  useEffect(()=>{
-    console.log(page)
-  },[])
+  // useEffect(()=>{
+  //   console.log(page)
+  // },[])
     //조건에 따라 작동하는 함수 작성 예정
     const increaseNumber = () =>{
         incrNum()

@@ -83,10 +83,10 @@ Our First Anniversary
 const Photos = [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 const Length = Descriptions.length;
-
-export default {
+const objects = {
     Titles,
     Descriptions,
     Length
     ,Photos
 }
+export default objects;
