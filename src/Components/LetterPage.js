@@ -92,7 +92,7 @@ const LetterPage = ({page,incrNum}) => {
 
           { 
             page < 3 ?
-            (page == 0 ? 
+            (page === 0 ? 
             <Present onClick={increaseNumber}>
               {Data.Descriptions[page]}
             </Present>: <Description>
@@ -103,12 +103,12 @@ const LetterPage = ({page,incrNum}) => {
                  </ImageContainer>
               }
               {Data.Descriptions[page]}
-            </Description>) : (page == 0 ? 
+            </Description>) : (page === 0 ? 
             <Present onClick={increaseNumber}>
               {Data.Descriptions[page]}
             </Present>: <Description2>
               {
-                  Data.Photos[page] != 0 ? 
+                  Data.Photos[page] !== 0 ? 
                   <ImageContainer src={Photo}>
 
                   </ImageContainer>:<div></div>
