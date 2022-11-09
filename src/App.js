@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path = "absproxy/3000/" element = {<LetterContainer/>}></Route>
+        <Route path = "/" element = {<LetterContainer/>}></Route>
       </Routes>
     </div>
 
