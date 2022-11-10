@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import Data from '../Data/LetterData';
+import LoadingIcons from 'react-loading-icons'
 import Photo from '../Images/photo.png'
 import './Transition.css'
 const Background = styled.div`
@@ -73,9 +74,8 @@ height:45%;
 width:80%;
 `
 const LetterPage = ({page,incrNum}) => {
-  useEffect(()=>{
-    console.log(page)
-  },[page])
+
+
   const increaseNumber = () =>{
     incrNum()
   }
@@ -109,9 +109,10 @@ const LetterPage = ({page,incrNum}) => {
             </Present>: <Description2>
               {
                   Data.Photos[page] !== 0 ? 
-                  <ImageContainer src={Photo}>
-
+                 
+                 <ImageContainer src={Photo}>
                   </ImageContainer>:<div></div>
+                  
               }
               {Data.Descriptions[page]}
             </Description2>)
