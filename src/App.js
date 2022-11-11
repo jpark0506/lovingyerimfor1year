@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import {
   Routes,
   Route
@@ -7,7 +7,9 @@ import LetterContainer from "./Container/LetterContainer"
 
 
 const App = () => {
-  
+ useEffect(()=>{
+  console.log(`build mode : ${process.env.NODE_ENV}`)
+ },[])
   return (
     <div>
       <Routes>

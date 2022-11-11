@@ -16,9 +16,6 @@ const Container = styled.div`
 const LetterContainer = () => {
   
   const [number, setNumber] = useState(0)
-  useEffect(()=>{
-    console.log(number)
-  },[number])
   const increaseNumber = () => {
     setNumber(number+1)
   }
