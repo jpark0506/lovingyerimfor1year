@@ -15,7 +15,7 @@ const App = () => {
       <Routes>
         {
           process.env.NODE_ENV === "development" ? 
-          <Route path = "/absproxy/3000" element = {<LetterContainer/>}></Route>:
+          <Route path = "/" element = {<LetterContainer/>}></Route>:
           <Route path = "/" element = {<LetterContainer/>}></Route> 
         }
        
