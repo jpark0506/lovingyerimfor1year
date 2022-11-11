@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react'
+import React,{useState} from 'react'
 import styled from 'styled-components';
 import LetterPage from '../Components/LetterPage'
 import NavPage from '../Components/NavPage';

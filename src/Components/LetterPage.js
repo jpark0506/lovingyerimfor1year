@@ -2,7 +2,6 @@ import React from 'react'
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import Data from '../Data/LetterData';
-import LoadingIcons from 'react-loading-icons'
 import Photo from '../Images/photo.png'
 import './Transition.css'
 const Background = styled.div`
