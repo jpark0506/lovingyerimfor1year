@@ -3,7 +3,6 @@ import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import Data from '../Data/LetterData';
 import LoadingIcons from 'react-loading-icons'
-import Photo from '../Images/photo.png'
 import './Transition.css'
 const Background = styled.div`
 display: flex;
@@ -29,6 +28,8 @@ const Description = styled.div`
   color:#3D8361;
   font-family: var(--font-EF_WAKEUP);
   flex-direction:column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 `;
 const Description2 = styled.div`
   background-color: #c6ebc5;
@@ -45,6 +46,9 @@ const Description2 = styled.div`
   pagging:20%;
   font-family: var(--font-EF_WAKEUP);
   flex-direction:column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-decoration: underline; 
+  text-underline-position:under;
 `;
 const Present = styled.div`
   background-color: #c6ebc5;
@@ -57,6 +61,7 @@ const Present = styled.div`
   font-size: 120px;
   color:#3D8361;
   font-family: var(--font-EF_WAKEUP);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 const Title=styled.div`
   background-color: #fbf2cf;
@@ -68,10 +73,12 @@ const Title=styled.div`
   height: 20%;
   color:#fa7070;
   font-family: var(--font-EF_WAKEUP);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 const ImageContainer = styled.img`
 height:45%;
 width:80%;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `
 const LetterPage = ({page,incrNum}) => {
 
@@ -96,12 +103,7 @@ const LetterPage = ({page,incrNum}) => {
             <Present onClick={increaseNumber}>
               {Data.Descriptions[page]}
             </Present>: <Description>
-              {
-                Data.Photos[page] === 0 ? <div></div>:
-                 <ImageContainer src={Photo}>
-
-                 </ImageContainer>
-              }
+              
               {Data.Descriptions[page]}
             </Description>) : (page === 0 ? 
             <Present onClick={increaseNumber}>
@@ -110,7 +112,7 @@ const LetterPage = ({page,incrNum}) => {
               {
                   Data.Photos[page] !== 0 ? 
                  
-                 <ImageContainer src={Photo}>
+                 <ImageContainer src={`/img/photo.png`}>
                   </ImageContainer>:<div></div>
                   
               }

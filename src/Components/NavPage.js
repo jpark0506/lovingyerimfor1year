@@ -14,6 +14,8 @@ height: 7%;
 background-color: #fbf2cf;
 color:#3D8361;
 padding:2%;
+text-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `
 const NavPage = ({page,incrNum, decrNum}) => {
   // useEffect(()=>{
