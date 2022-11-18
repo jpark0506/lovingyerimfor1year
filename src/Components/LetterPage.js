@@ -112,7 +112,7 @@ const LetterPage = ({page,incrNum}) => {
               {
                   Data.Photos[page] !== 0 ? 
                  
-                 <ImageContainer src={`/img/${page-20}`}>
+                 <ImageContainer src={`/img/${page-20}.jpg`}>
                   </ImageContainer>:<div></div>
                   
               }
