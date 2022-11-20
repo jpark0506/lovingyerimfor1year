@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{useState, CSSProperties} from 'react'
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import Data from '../Data/LetterData';
 import LoadingIcons from 'react-loading-icons'
 import './Transition.css'
+import {SyncLoader}from "react-spinners";
 const Background = styled.div`
 display: flex;
 justify-content: center;
@@ -80,9 +81,14 @@ height:45%;
 width:80%;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `
+const override = {
+  margin: "30px"
+  
+};
+
 const LetterPage = ({page,incrNum}) => {
-
-
+  const [load,setLoad] = useState(true)
+  
   const increaseNumber = () =>{
     incrNum()
   }
@@ -111,8 +117,12 @@ const LetterPage = ({page,incrNum}) => {
             </Present>: <Description2>
               {
                   Data.Photos[page] !== 0 ? 
-                 
-                 <ImageContainer src={`/img/${page-1}.jpg`}>
+                  load ? <SyncLoader 
+                  size={20} 
+                  color={"#3D8361"} 
+                  loading={load}
+                  cssOverride={override}/>: 
+                 <ImageContainer onLoad={()=>setLoad(false)} src={`/img/${page-1}.jpg`}>
                   </ImageContainer>:<div></div>
                   
               }
