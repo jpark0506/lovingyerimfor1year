@@ -124,8 +124,9 @@ const LetterPage = ({page,incrNum}) => {
                   size={20} 
                   color={"#3D8361"} 
                   loading={load}
-                  cssOverride={override}/>: 
-                 <ImageContainer onLoad={()=>setLoad(false)} src={`/img/${page-1}.jpg`}>
+                  cssOverride={override}
+                  /> : 
+                 <ImageContainer onLoad={()=>setLoad(false)} onError={() => alert("image load error")} src={`/img/${page-1}.jpg`}>
                   </ImageContainer>:<div></div>
                   
               }
