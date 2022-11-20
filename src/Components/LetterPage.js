@@ -1,4 +1,4 @@
-import React,{useState, CSSProperties} from 'react'
+import React,{useState, CSSProperties, useEffect} from 'react'
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import Data from '../Data/LetterData';
@@ -87,6 +87,9 @@ const override = {
 };
 
 const LetterPage = ({page,incrNum}) => {
+  useEffect(()=>{
+    console.log(load)
+  },[load])
   const [load,setLoad] = useState(true)
   
   const increaseNumber = () =>{
