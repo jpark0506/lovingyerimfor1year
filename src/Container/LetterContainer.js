@@ -18,7 +18,7 @@ const LetterContainer = () => {
   const [number, setNumber] = useState(0)
   
   useEffect(()=>{
-    console.log(number)
+    console.log(`photo num : ${number+2}`)
   },[number])
   
   const increaseNumber = () => {
