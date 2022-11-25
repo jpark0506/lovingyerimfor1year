@@ -48,6 +48,7 @@ const Description2 = styled.div`
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   text-decoration: underline; 
   text-underline-position:under;
+
 `;
 const Present = styled.div`
   background-color: #c6ebc5;
@@ -78,7 +79,7 @@ const ImageContainer = styled.img`
 height:45%;
 width:80%;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-object-fit: cover;
+object-fit: contain;
 
 `
 const override = {
