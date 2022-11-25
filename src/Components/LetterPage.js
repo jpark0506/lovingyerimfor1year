@@ -78,6 +78,8 @@ const ImageContainer = styled.img`
 height:45%;
 width:80%;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+object-fit: cover;
+
 `
 const override = {
   margin: "30px"
